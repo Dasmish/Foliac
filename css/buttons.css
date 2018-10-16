@@ -1,0 +1,54 @@
+.btn{
+	text-transform: uppercase;
+	border: 2px solid #68bf72;
+	text-decoration: none;
+	border-radius: 4px;
+	padding: 15px 20px;
+	font-weight: bold;
+	display: inline-block;
+}
+.btn--green{
+	color: #68bf72;
+	background-color: #68bf72;
+}
+.btn--transparent{
+	background: transparent;
+}
+.btn--small{
+    padding: 5px 15px ;
+    font-size: 1.6rem;
+    text-transform: none;
+}
+.btn--grey {
+	color: #3c4955;
+	border: 2px solid #3c4955;
+}
+.btn--inverse {
+	font-size: 2rem;
+	color: #fff;
+	background-color: #48bf72;
+}
+.btn--full-width {
+	width: 100%;
+	display: block;
+}
+
+
+.btn--inverse:focus,
+.btn--inverse:hover,
+.btn--inverse:active {
+	color: #48bf72;
+	background-color: transparent;
+}
+.btn--transparent.btn--green:hover,
+.btn--transparent.btn--green:focus,
+.btn--transparent.btn--green.active{
+	background-color: green;
+	color: #fff;
+}
+.btn--grey.btn--transparent:hover,
+.btn--grey.btn--transparent:focus,
+.btn--grey.btn--transparent.active{
+	background-color: #ededed;
+	color: #000;
+}

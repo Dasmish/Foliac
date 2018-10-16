@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 @font-face {
-	font-family: BigJhon;
+	font-family: BigJohn;
 	src:url(../fonts/BigJohn.otf) format("opentype"),
 		url(../fonts/bigjohn-webfont.woff) format("woff"),
 		url(../fonts/bigjohn-webfont.woff2) format("woff2");
@@ -16,6 +16,7 @@
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	transition: all .4s ease-in;
 }
 html{
 	font-size: 10px;
@@ -28,10 +29,262 @@ body{
 	color: #3c4955;
 }
 
-
+.container{
+	margin: 0 auto;
+	max-width: 1140px;
+}
+.section{
+	padding: 90px 0;
+}
 .section--bg{
 	background-color: #3c4955;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	color: #fff;
 }
 .section--100{
 	min-height: 100vh;
+	padding: 0;
+}
+
+.flex{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+	justify-content: center;
+}
+
+.title{
+	font-family: BigJohn, sans-serif;
+	text-transform: uppercase;
+}
+
+.title--accent {
+	color: #48bf72;
+}
+.title--green{
+	color: #68bf72;
+}
+
+.sub_title{
+	font-family: SlimJoe;
+	font-size: 3rem;
+	font-weight: 200; 
+	line-height: 1;
+	margin-bottom: 1.5em;
+}
+
+h1.title{
+	font-size: 4.6rem;
+}
+
+h3.title{
+	font-size: 2.6rem;
+}
+
+
+
+.text-center{
+	text-align: center;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 35px 0;
+}
+
+.header__logo{
+    float: left;
+}
+
+.header__nav{
+    float: right;
+    padding: 20px 0;
+}
+
+.header__nav ul li {
+    display: inline-block;
+}
+
+.header__nav ul li + li:before {
+    content: '';
+    display: inline-block;
+    height: 20px;
+    border-left: 1px solid #fff;
+    transform: rotate(15deg);
+    /* color: #fff; */
+    margin: 0px 50px;
+    opacity: 0.4;
+    vertical-align: middle;
+    /* font-size: 1.5em; */
+    /* font-weight: 300; */
+}
+
+.header__nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: all .4s ease-in-out;
+}
+
+.header__nav ul li a:hover, 
+.header__nav ul li a:focus,
+.header__nav ul li a:active {
+    color: #48bf72;
+    
+}
+
+.filters {
+    padding: 0;
+    margin: 0;
+}
+
+.filters li {
+    display: inline-block;
+    margin: 5px;
+}
+
+.items {
+    font-size: 0;
+    padding: 20px 0;
+}
+
+
+
+.item {
+    display: inline-block;
+    font-size: 1.6rem;
+    width: 40%;
+    height: 305px;
+    margin: 1.25%;
+    vertical-align: top;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.item--wide {
+    width: 55%
+}
+
+.item--tall {
+    height: 440px
+}
+
+.item__img, .item__overlay {
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.item__overlay {
+    display: inline-block;
+    background-color: rgba(72, 191, 114, 0.9);
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    transition: all .8s ease-in-out;
+}
+
+.item:hover .item__overlay {
+    opacity: 1;
+}
+
+.item__info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.item__title {
+    font-size: 3rem;
+    line-height: 1;
+    font-weight: bold;
+    overflow: hidden;
+    max-height: 6rem;
+}
+
+.item__text {
+    overflow: hidden;
+    max-height: 8rem;
+}
+
+.about{
+	margin-left: 50%;
+}
+.about__title{
+	font-size: 3rem;
+	margin-bottom: .25em;
+}
+.about__subtitle{
+	font-size: 2.2rem;
+}
+.about__text{
+	line-height: 1.6;
+	padding: 40px 0;
+}
+
+
+
+.copyright,
+.social{
+	display: inline-block;
+	width: 45%;
+	font-size: 1.6rem;
+	padding: 0;
+	vertical-align: middle;
+	color: #fff;
+}
+.copyright a,
+.social a{
+	color: #fff;
+	text-decoration: none;
+}
+.social{
+	text-align: right;
+}
+.social li{
+	display: inline-block;
+}
+.social li:not(:first-of-type){
+	margin-left: 40px;
+}
+.social li a{
+	display: inline-block;
+	width: 50px;
+	height: 55px;
+}
+
+.icon{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+}
+.icon--tw{
+	background-image: url(../img/twitter.png)
+}
+.icon--in{
+	background-image: url(../img/linkedin.png)
+}
+.icon--dr{
+	background-image: url(../img/dribbble.png)
+}
+.icon--be{
+	background-image: url(../img/behance.png)
+}
+
+.icon:hover{
+	transform: scale(1.5)
 }
